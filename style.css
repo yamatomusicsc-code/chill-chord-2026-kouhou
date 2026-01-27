@@ -1,0 +1,80 @@
+/* Google Fontsからおしゃれなフォントを読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&display=swap');
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    color: #4a4a4a; /* 真っ黒にしないのがチルいコツ */
+    background-color: #fcfaf5; /* 優しいアイボリー */
+    line-height: 1.8;
+}
+
+/* ヘッダー：背景に音楽っぽい画像を入れるとさらにUP */
+header {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/aikon.jpg.jpg')
+    ;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 10px;
+}
+
+/* 各セクションの余白 */
+section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #d4c4a8;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+/* カード形式のレイアウト */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* 入会ボタン */
+.btn {
+    display: inline-block;
+    background-color: #d4c4a8;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #bfae92;
+    transform: translateY(-3px);
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.8rem;
+    color: #999;
+}
