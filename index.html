@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+
 
 <nav class="yamato-nav">
     <div class="nav-logo-area">
@@ -165,9 +165,20 @@
 <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+
+    // 三本線ボタンを押した時の開閉
     menuBtn.addEventListener('click', () => {
         menuBtn.classList.toggle('active');
         mobileMenu.classList.toggle('active');
+    });
+
+    // ★ここを追加：メニュー内のリンクをクリックしたら閉じる★
+    const mobileLinks = document.querySelectorAll('#mobile-menu a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuBtn.classList.remove('active'); // ボタンの形を戻す
+            mobileMenu.classList.remove('active'); // メニューを隠す
+        });
     });
 </script>
 
